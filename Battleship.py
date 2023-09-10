@@ -187,24 +187,30 @@ while gamePlay == True:
                 print("Please enter valid Co-ordinates")
             elif shotTaken == "SONAR":
                 if sonar > 0 and countTurns == 0:
-
+                    #logic when sonar is used
                     sonar -= 1
                     countTurns = 10
                     ships = {}
                     strToAdd = ""
+
+                    #check the status of the ships and see if they are still sailing or not
+                    #if the ship is still sailing, add it to the dictionary for sonar to find
                     shipsSailing = checkShipStatus(shipSymbols, shipLocation)
                     for i in range(len(shipsSailing)):
                         if shipsSailing[i] == True:
                             ships.update({shipNames[i]:shipSizes[i]})
 
+                    #find a random ship that is still sailing and get its position
                     randShip = shipName,shipSize = random.choice(list(ships.items()))
                     totalPos = findPos(shipName[0], shipLocation)
                     for pos in totalPos:
                         if currentOcean[pos[0]][pos[1]] == '-':
                             currentOcean[pos[0]][pos[1]] = shipName[0]
+                            shipLocation[pos[0]][pos[1]] = "X"
                             strToAdd = colCordinates[pos[1]]+str(pos[0])
                             shotsTaken.append(strToAdd)
                             break
+                    
                     if strToAdd != "":
                         print("---------------------------")
                         print("  " + " ".join(colCordinates))
