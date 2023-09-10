@@ -18,10 +18,10 @@ To run the game there are a couple of options:
 
 1. A docker repo has been created and the following steps can be taken to run it:
 
-    Pull the Docker Image:
+    Pull the Docker Image:<br>
    ```docker pull architg07/my-battleship-image```
 
-    Run the Docker Image in Interactive Mode:
+    Run the Docker Image in Interactive Mode:<br>
    ```docker run -i architg07/my-battleship-image```
 
 2. In the event running Docker on a local setup is not a permissible operation,the repo can be cloned and running the "Battleship.py" file will run the game in the terminal. 
