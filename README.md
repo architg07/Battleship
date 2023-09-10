@@ -12,7 +12,7 @@ This game follows the basic rules of Battleship where you have to sink the enemy
 
 Happy Hunting!
 
-(There is also a bonus flowchart in the repo which provides the basic flow of the game.)
+(There is also a bonus [flowchart](https://github.com/architg07/Battleship/blob/main/Battleship%20Flowchart.png) in the repo which provides the basic flow of the game.)
 
 To run the game there are a couple of options:
 
